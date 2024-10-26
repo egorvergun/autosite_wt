@@ -12,7 +12,7 @@ const Home = () => {
         <Box sx={homeStyles.textContainer}>
             <Typography variant="h3" sx={homeStyles.headline}>
             On fingertips...<br />
-            It is Brabus auto car 
+            It is Brabus auto car yupy
             </Typography>
             <Typography variant="h6" sx={homeStyles.subheadline}>
             Because you CAN
