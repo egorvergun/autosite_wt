@@ -54,7 +54,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Services
+                Gnida
               </Link>
               <Link
                 href="/projects"
