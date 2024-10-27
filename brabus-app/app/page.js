@@ -6,13 +6,13 @@ import CarCarousel from '../components/CarCarousel';
 
 const Home = () => {
   return (
-    <Box width={'100%'} display={'flex-column'}>
+    <Box width={'100%'} display={'flex'} flexDirection={'column'} backgroundColor={'black'}>
         <Box sx={homeStyles.container}>
         {/* Контейнер для текста */}
         <Box sx={homeStyles.textContainer}>
             <Typography variant="h3" sx={homeStyles.headline}>
             On fingertips...<br />
-            It is Brabus auto car yupy
+            It is Brabus auto...
             </Typography>
             <Typography variant="h6" sx={homeStyles.subheadline}>
             Because you CAN
@@ -27,7 +27,17 @@ const Home = () => {
         {/* Тёмный оверлей для улучшения видимости текста */}
         <Box sx={homeStyles.overlay} />
         </Box>
-        <CarCarousel />
+        <Box 
+  width={'100%'} 
+  margin={'0 auto'} 
+  sx={{ 
+    backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
+    backgroundSize: 'cover', // Закрывает весь контейнер
+    backgroundPosition: 'center', // Центрирует изображение
+  }} 
+>        
+  <CarCarousel />
+</Box>
     </Box>
   );
 };

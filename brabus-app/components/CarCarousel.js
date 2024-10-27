@@ -8,15 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import dynamic from 'next/dynamic';
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-const cars = [
-  { src: '/car1.jpg', alt: 'Car 1' },
-  { src: '/car2.jpg', alt: 'Car 2' },
-  { src: '/car3.jpg', alt: 'Car 3' },
-];
-
 const CarCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -29,27 +23,82 @@ const CarCarousel = () => {
   return (
     <Box 
       sx={{
-        width: '55%',
-        margin: '0 auto', // Центрирование контейнера в родителе
+        width: '100%',
+        margin: '0 auto',
       }}
     >
       <Slider {...settings}>
-        {cars.map((car, index) => (
-          <Box key={index}>
-            <img 
-              src={car.src} 
-              alt={car.alt} 
-              style={{ 
-                width: '100%', 
-                maxWidth: '100%', 
-                height: 'auto', 
-                objectFit: 'cover' 
-              }} 
-            />
+        {/* Слайд 1 */}
+        <Box 
+          sx={{
+            width: '100%',
+            overflow: 'hidden',
+            mb: 5,
+            display: 'flex',
+            justifyItems: 'center'
+          }}
+        >
+          <Box width={'70%'}>
+          <img 
+            src='/car1.png' 
+            alt='Car 2' 
+            style={{ 
+              maxWidth: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }} 
+          />
           </Box>
-        ))}
+        </Box>
+
+        {/* Слайд 2 */}
+        <Box 
+          sx={{
+            width: '100%',
+            overflow: 'hidden',
+            mb: 5,
+            display: 'flex',
+            justifyItems: 'center'
+          }}
+        >
+          <Box width={'70%'}>
+          <img 
+            src='/car2.png' 
+            alt='Car 2' 
+            style={{ 
+              maxWidth: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }} 
+          />
+          </Box>
+        </Box>
+
+        {/* Слайд 3 */}
+        <Box 
+          sx={{
+            width: '100%',
+            overflow: 'hidden',
+            mb: 5,
+            display: 'flex',
+            justifyItems: 'center'
+          }}
+        >
+          <Box width={'70%'}>
+          <img 
+            src='/car3.png' 
+            alt='Car 2' 
+            style={{ 
+              maxWidth: '100%',
+              height: 'auto',
+              objectFit: 'cover',
+            }} 
+          />
+          </Box>
+        </Box>
+        
       </Slider>
-      </Box>
+    </Box>
   );
 };
 

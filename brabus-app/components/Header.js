@@ -14,14 +14,14 @@ const Header = () => {
           }}
         >
           {/* Логотип */}
-          <Box sx={{ my: 2 }}>
+          <Box sx={{ mt: 2 }}>
             <Link href="/" sx={{ textDecoration: 'none' }}>
-              <Image src={'/logo.png'} width={100} height={100} alt="Company Logo" />
+              <Image src={'/logo.png'} width={135} height={100} alt="Company Logo" />
             </Link>
           </Box>
 
           {/* Навигация */}
-          <Box component="nav" sx={{ mt: 2 }}>
+          <Box component="nav" sx={{ mt: 2 , mb: 2}}>
             <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link
                 href="/"
@@ -32,7 +32,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Home
+                Art & Culture
               </Link>
               <Link
                 href="/page2"
@@ -43,7 +43,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                About
+                Sustainability
               </Link>
               <Link
                 href="/services"
@@ -54,7 +54,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Gnida
+                Design
               </Link>
               <Link
                 href="/projects"
@@ -65,7 +65,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Projects
+                Innovations
               </Link>
               <Link
                 href="/contact"
@@ -76,7 +76,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Contact
+                Exclusive
               </Link>
               <Link
                 href="/blog"
@@ -87,7 +87,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Blog
+                Vehicles
               </Link>
             </Box>
           </Box>
