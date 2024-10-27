@@ -28,16 +28,16 @@ const Home = () => {
         <Box sx={homeStyles.overlay} />
         </Box>
         <Box 
-  width={'100%'} 
-  margin={'0 auto'} 
-  sx={{ 
-    backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
-    backgroundSize: 'cover', // Закрывает весь контейнер
-    backgroundPosition: 'center', // Центрирует изображение
-  }} 
->        
-  <CarCarousel />
-</Box>
+          width={'100%'} 
+          margin={'0 auto'} 
+          sx={{ 
+            backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
+            backgroundSize: 'cover', // Закрывает весь контейнер
+            backgroundPosition: 'center', // Центрирует изображение
+          }} 
+        >        
+          <CarCarousel />
+        </Box>
     </Box>
   );
 };
