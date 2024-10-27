@@ -34,6 +34,7 @@ const Home = () => {
             backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
             backgroundSize: 'cover', // Закрывает весь контейнер
             backgroundPosition: 'center', // Центрирует изображение
+            height: { xs: '50vh', sm: '75vh', md: '100vh' },
           }} 
         >        
           <CarCarousel />
