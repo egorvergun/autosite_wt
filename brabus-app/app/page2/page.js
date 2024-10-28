@@ -8,23 +8,23 @@ const HobbiesPage = () => {
   const people = [
     {
       name: 'Matúš',
-      photo: 'developer.jpg', // URL fotky
-      hobby: { title: 'Čítanie', description: '' },
+      photo: 'developer.jpg', // URL to the photo
+      hobby: { title: 'Čítanie', description: 'Zábava a relax pri čítaní kníh.' },
     },
     {
       name: '1',
-      photo: 'developer.jpg', // URL fotky
-      hobby: { title: 'Fotografovanie', description: '' },
+      photo: 'developer.jpg', // URL to the photo
+      hobby: { title: 'Fotografovanie', description: 'Umenie zachytávať okamihy.' },
     },
     {
       name: '2',
-      photo: 'developer.jpg', // URL fotky
-      hobby: { title: 'Hudba', description: '' },
+      photo: 'developer.jpg', // URL to the photo
+      hobby: { title: 'Hudba', description: 'Vášeň pre hudbu a hranie na nástroje.' },
     },
     {
       name: '3',
-      photo: 'developer.jpg', // URL fotky
-      hobby: { title: 'Hry', description: '' },
+      photo: 'developer.jpg', // URL to the photo
+      hobby: { title: 'Hry', description: 'Oddych pri hrách rôznych žánrov.' },
     },
   ];
 
@@ -33,14 +33,18 @@ const HobbiesPage = () => {
       <h1 className="text-center mb-4">Záľuby členov tímu</h1>
       <Row>
         {people.map((person, index) => (
-          <Col key={index} md={3} className="mb-4">
-            <Card>
+          <Col key={index} md={3} sm={6} xs={12} className="mb-4">
+            <Card className="h-100">
+              <Card.Img
+                variant="top"
+                src={person.photo}
+                alt={`${person.name} photo`}
+                className="img-fluid"
+              />
               <Card.Body>
-                {/* Fotka člena tímu sa zobrazuje tu */}
-                <Card.Img variant="top" src={person.photo} alt={`${person.name} photo`} />
                 <Card.Title>{person.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{person.hobby.title}</Card.Subtitle>
-                <Card.Text>{person.hobby.description}</Card.Text>
+                <Card.Text>{person.hobby.description || 'Popis nie je dostupný.'}</Card.Text>
               </Card.Body>
             </Card>
           </Col>

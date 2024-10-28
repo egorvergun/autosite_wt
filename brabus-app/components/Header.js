@@ -43,7 +43,7 @@ const Header = () => {
                   fontSize: 18,
                 }}
               >
-                Sustainability
+                Zaľuby
               </Link>
               <Link
                 href="/services"
@@ -79,7 +79,7 @@ const Header = () => {
                 Exclusive
               </Link>
               <Link
-                href="/blog"
+                href="/page3"
                 sx={{
                   color: 'white',
                   textDecoration: 'none',
