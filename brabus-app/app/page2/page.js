@@ -7,24 +7,24 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 const HobbiesPage = () => {
   const people = [
     {
-      name: 'Matúš',
+      name: '0',
       photo: 'developer.jpg', // URL to the photo
-      hobby: { title: 'Čítanie', description: 'Zábava a relax pri čítaní kníh.' },
+      hobby: { title: '', description: '' },
     },
     {
       name: '1',
       photo: 'developer.jpg', // URL to the photo
-      hobby: { title: 'Fotografovanie', description: 'Umenie zachytávať okamihy.' },
+      hobby: { title: '', description: '' },
     },
     {
       name: '2',
       photo: 'developer.jpg', // URL to the photo
-      hobby: { title: 'Hudba', description: 'Vášeň pre hudbu a hranie na nástroje.' },
+      hobby: { title: '', description: '' },
     },
     {
       name: '3',
       photo: 'developer.jpg', // URL to the photo
-      hobby: { title: 'Hry', description: 'Oddych pri hrách rôznych žánrov.' },
+      hobby: { title: '', description: '' },
     },
   ];
 
