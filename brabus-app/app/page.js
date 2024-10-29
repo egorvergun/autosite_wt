@@ -8,15 +8,15 @@ const Home = () => {
   return (
     <Box width={'100%'} display={'flex'} flexDirection={'column'} backgroundColor={'black'}>
         <Box sx={homeStyles.container}>
-            {/* Контейнер для текста */}
-            <Box sx={homeStyles.textContainer}>
-                <Typography variant="h3" sx={homeStyles.headline}>
-                On fingertips...<br />
-                It is Brabus auto...
-                </Typography>
-                <Typography variant="h6" sx={homeStyles.subheadline}>
-                  Because you CAN
-                </Typography>
+        {/* Контейнер для текста */}
+        <Box sx={homeStyles.textContainer}>
+            <Typography variant="h3" sx={homeStyles.headline}>
+            On fingertips...<br />
+            It is Brabus auto...
+            </Typography>
+            <Typography variant="h6" sx={homeStyles.subheadline}>
+            Because you CAN
+            </Typography>
 
                 {/* Кнопка */}
                 <Button variant="outlined" sx={homeStyles.button}>
