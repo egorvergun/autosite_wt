@@ -11,7 +11,7 @@ const Home = () => {
         {/* Контейнер для текста */}
         <Box sx={homeStyles.textContainer}>
         <Typography variant="h3" sx={homeStyles.headline}>
-            On fingertips...<br />
+            On fingertips... <br />
             It is Brabus auto...
         </Typography>
             <Typography variant="h6" sx={homeStyles.subheadline}>

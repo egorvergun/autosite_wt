@@ -1,4 +1,4 @@
-// File: C:\Users\vergu\Desktop\autosite_wt\brabus-app\app\page2\page.js
+// File: D:\Brabus3.0\autosite_wt\brabus-app\app\page2\page.js
 import * as entry from '../../../../app/page2/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
