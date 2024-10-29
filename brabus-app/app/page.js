@@ -10,10 +10,10 @@ const Home = () => {
         <Box sx={homeStyles.container}>
         {/* Контейнер для текста */}
         <Box sx={homeStyles.textContainer}>
-            <Typography variant="h3" sx={homeStyles.headline}>
+        <Typography variant="h3" sx={homeStyles.headline}>
             On fingertips...<br />
             It is Brabus auto...
-            </Typography>
+        </Typography>
             <Typography variant="h6" sx={homeStyles.subheadline}>
             Because you CAN
             </Typography>
@@ -26,24 +26,22 @@ const Home = () => {
 
             {/* Тёмный оверлей для улучшения видимости текста */}
             <Box sx={homeStyles.overlay} />
-            <Box width={'100%'}><Box sx={homeStyles.fadeUp} /></Box>
+            <Box component="img" src={'/fade2.png'} sx={homeStyles.fadeUp} />
         </Box>
         
-        
         <Box 
-          width={'100%'} 
-          margin={'0 auto'} 
           sx={{ 
             position: 'relative',
             backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
             backgroundSize: 'cover', // Закрывает весь контейнер
             backgroundPosition: 'center', // Центрирует изображение
-            height: { xs: '50vh', sm: '75vh', md: '100vh' },
+            height: { xs: '50vh', md: '100vh' },
+            width: '100%',
           }} 
         >
-          <Box width={'100%'}><Box sx={homeStyles.fadeDown} /></Box>        
+          <Box  component="img" src={'/fade.png'} sx={homeStyles.fadeDown} />     
           <CarCarousel />
-          <Box width={'100%'}><Box sx={homeStyles.fadeUp} /></Box>
+          <Box  component="img" src={'/fade2.png'} sx={homeStyles.fadeUp} />
         </Box>
     </Box>
   );

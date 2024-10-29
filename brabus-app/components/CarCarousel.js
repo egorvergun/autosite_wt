@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,13 +19,14 @@ const CarCarousel = () => {
   };
 
   const settings = {
+    lazyLoad: true,
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     arrows: false,
   };
 
@@ -41,14 +42,15 @@ const CarCarousel = () => {
       sx={{
         position: 'relative',
         width: '100%',
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        height: { xs: '50vh', sm: '75vh', md: '100vh' },
+        height: { xs: '50vh', md: '100vh' },
       }}
     >
+
       <Box sx={{ width: '100%', zIndex: 1 }}>
         <Slider 
           ref={sliderRef}
@@ -64,23 +66,40 @@ const CarCarousel = () => {
               }}
             >
               <Box 
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              <Box 
-                component="img"
-                src={slide.src}
-                alt={slide.alt}
                 sx={{
-                  width: { xs: '90%', sm: '80%', md: '70%' },
-                  height: 'auto',
-                  objectFit: 'cover',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
                 }}
-              />
-            </Box>
+              >
+                <Box 
+                  component="img"
+                  src={slide.src}
+                  alt={slide.alt}
+                  sx={{
+                    width: { xs: '90%', sm: '80%', md: '70%' },
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
+                  
+                />
+                {slide.id === 1 && (
+                    <Typography 
+                      variant="h3" 
+                      sx={{
+                        position: 'absolute',
+                        top: '10%',
+                        width: '100%',
+                        fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
+                        textAlign: 'center',
+                        color: 'Black',
+                        zIndex: 3,
+                      }}
+                    >
+                      Amazing Auto Park
+                    </Typography>
+                )}
+              </Box>
             </Box>
           ))}
         </Slider>
@@ -92,12 +111,13 @@ const CarCarousel = () => {
         sx={{
           position: 'absolute',
           top: '50%',
-          left: '20px',
+          left: '30px',
           transform: 'translateY(-50%)',
           backgroundImage: 'url(/left_button_arrow.png)',
           backgroundSize: 'cover',
-          width: { xs: '30px', md: '50px' }, // Меньший размер для маленьких экранов
-          height: { xs: '30px', md: '50px' }, // Меньший размер для маленьких экранов
+          width: { xs: '30px', md: '50px' },
+          height: { xs: '30px', md: '50px' },
+          opacity: {xs: '40%', md: '100%'},
           minWidth: 'auto',
           p: 0,
           zIndex: 2,
@@ -108,17 +128,40 @@ const CarCarousel = () => {
         sx={{
           position: 'absolute',
           top: '50%',
-          right: '20px',
+          right: '30px',
           transform: 'translateY(-50%)',
           backgroundImage: 'url(/right_button_arrow.png)',
           backgroundSize: 'cover',
-          width: { xs: '30px', md: '50px' }, // Меньший размер для маленьких экранов
-          height: { xs: '30px', md: '50px' }, // Меньший размер для маленьких экранов
+          width: { xs: '30px', md: '50px' },
+          height: { xs: '30px', md: '50px' },
+          opacity: {xs: '30%', md: '100%'},
           minWidth: 'auto',
           p: 0,
           zIndex: 2,
         }}
       />
+
+      {/* Кнопка Order снизу */}
+      <Button
+        variant="contained"
+        color="primary"
+        sx={{
+          position: 'absolute',
+          bottom: '20px',
+          textTransform: 'uppercase',
+          backgroundColor: 'black',
+          borderRadius: '40px',
+          width: "250px",
+          px: 3,
+          py: 1,
+          zIndex: 10,
+          '&:hover': {
+            backgroundColor: '#262626',
+          },
+        }}
+      >
+        Order
+      </Button>
     </Box>
   );
 };
