@@ -1,4 +1,4 @@
-// File: D:\Brabus3.0\autosite_wt\brabus-app\app\layout.js
+// File: C:\Users\vergu\Desktop\autosite_wt\brabus-app\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
