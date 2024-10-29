@@ -11,6 +11,20 @@
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
+<<<<<<< HEAD
+=======
+    ],
+    "/page2/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page2/page.css",
+      "static/chunks/app/page2/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+>>>>>>> 61b0e3b6a22b39b003a1bd496ef5e8968d6fc7c7
     ]
   }
 }

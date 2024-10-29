@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import '../app/globals.css'; // Убедитесь, что путь правильный
 import Header from "../components/Header";
+import DHeader from "../components/dHeader"; // Импортируйте компонент DHeader
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
+        <DHeader /> {/* Разместите DHeader в конце */}
       </body>
     </html>
   );

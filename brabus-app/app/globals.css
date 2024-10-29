@@ -1,7 +1,31 @@
-* {
+/* styles/globals.css */
+
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /* Пример использования шрифта */
 }
 
-html{
-  overflow-x: hidden;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Медиа-запросы для адаптивности логотипа */
+@media (max-width: 768px) {
+  img[alt="Follow BRABUS"] {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  img[alt="Follow BRABUS"] {
+    width: 50%;
+  }
 }
