@@ -21,6 +21,8 @@ const homeStyles = {
     },
     headline: {
       fontWeight: 'bold',
+      whiteSpace: 'nowrap',
+      fontSize: { xs: '2rem', md: '3rem' },
       mb: 2,
     },
     subheadline: {
@@ -46,29 +48,22 @@ const homeStyles = {
     },
     fadeUp: {
       position: 'absolute',
-      top: 'auto',
-      left: 0,
-      right: 0,
       bottom: 0,
-      backgroundImage: 'url(/fade2.png)', // Убедитесь, что путь к изображению правильный
-      backgroundSize: 'cover',
-      height: '200px',
+      left: 0,
+      height: '30%',
       width: '100%',
       backgroundRepeat: 'no-repeat',
-      zIndex: 0,
+      zIndex: 4,
     },
     fadeDown: {
+      
       position: 'absolute',
       top: 0,
       left: 0,
-      right: 0,
-      bottom: 0,
-      backgroundImage: 'url(/fade.png)', // Убедитесь, что путь к изображению правильный
-      backgroundSize: 'cover',
-      height: '200px',
+      height: '30%',
       width: '100%',
       backgroundRepeat: 'no-repeat',
-      zIndex: 0,
+      zIndex: 4,
     },
   };
   
