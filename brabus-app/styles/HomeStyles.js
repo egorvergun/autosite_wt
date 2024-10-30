@@ -1,5 +1,7 @@
 // styles/HomeStyles.js
 
+import zIndex from "@mui/material/styles/zIndex";
+
 const homeStyles = {
     container: {
       height: '100vh', // высота на всю страницу
@@ -16,7 +18,7 @@ const homeStyles = {
     },
     textContainer: {
       position: 'relative',
-      zIndex: 1,
+      zIndex: 10,
       marginTop: '20%', // отступ сверху для позиционирования по вертикали
     },
     headline: {
@@ -53,7 +55,7 @@ const homeStyles = {
       height: '30%',
       width: '100%',
       backgroundRepeat: 'no-repeat',
-      zIndex: 4,
+      zIndex: 1,
     },
     fadeDown: {
       

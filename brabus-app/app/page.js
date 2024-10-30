@@ -1,8 +1,9 @@
 'use client';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Grid, Card, CardContent, CardMedia, Divider } from '@mui/material';
 import homeStyles from '../styles/HomeStyles'; // Импорт стилей
 import CarCarousel from '../components/CarCarousel';
+import CardSection from '@/components/cardSection';
 
 const Home = () => {
   return (
@@ -43,6 +44,7 @@ const Home = () => {
           <CarCarousel />
           <Box  component="img" src={'/fade2.png'} sx={homeStyles.fadeUp} />
         </Box>
+          <CardSection />
     </Box>
   );
 };
