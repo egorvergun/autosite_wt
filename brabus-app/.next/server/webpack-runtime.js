@@ -47,11 +47,6 @@
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/amd options */
-/******/ 	(() => {
-/******/ 		__webpack_require__.amdO = {};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/async module */
 /******/ 	(() => {
 /******/ 		var webpackQueues = typeof Symbol === "function" ? Symbol("webpack queues") : "__webpack_queues__";
@@ -199,11 +194,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("d834ed65c65df7f4")
-=======
-/******/ 		__webpack_require__.h = () => ("cac79db3e32bf07f")
->>>>>>> e75b3e96a6e6fd9a51992ca380ac3d8b09ed48c7
+/******/ 		__webpack_require__.h = () => ("a745571f413ec603")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
