@@ -1,4 +1,5 @@
 {
+  "/api/commits/route": "app/api/commits/route.js",
   "/changelog/page": "app/changelog/page.js",
   "/page": "app/page.js"
 }
