@@ -21,7 +21,7 @@ const Header = () => {
     { text: 'Sustainability', href: '/page2' },
     { text: 'Design', href: '/services' },
     { text: 'Exclusive', href: '/contact' },
-    { text: 'Vehicles', href: '/blog' },
+    { text: 'Vehicles', href: '/page3' },
     { text: 'Change Log', href: '/changelog' },
   ];
 
