@@ -1,5 +1,6 @@
 // styles/HomeStyles.js
 
+import CarCarousel from "@/components/CarCarousel";
 import zIndex from "@mui/material/styles/zIndex";
 
 const homeStyles = {
@@ -22,15 +23,18 @@ const homeStyles = {
       marginTop: '20%', // отступ сверху для позиционирования по вертикали
     },
     headline: {
-      fontWeight: 'bold',
+      fontFamily: 'BankGothicMedium',
       whiteSpace: 'nowrap',
       fontSize: { xs: '2rem', md: '3rem' },
-      mb: 2,
+      mb: 1,
     },
     subheadline: {
-      mb: 4,
+      fontFamily: 'Amazon Ember Regular',
+      mb: 3,
     },
     button: {
+      fontFamily: 'Amazon Ember Light',
+      fontWeigth: 100,
       color: 'white',
       borderColor: 'white',
       borderRadius: '50px',
@@ -67,6 +71,15 @@ const homeStyles = {
       backgroundRepeat: 'no-repeat',
       zIndex: 4,
     },
+    carCarousel:{
+        position: 'relative',
+        backgroundImage: 'url(/Asphalt.png)', // Укажите путь к изображению
+        backgroundSize: 'cover', // Закрывает весь контейнер
+        backgroundPosition: 'center', // Центрирует изображение
+        height: { xs: '50vh', md: '100vh' },
+        width: '100%',
+      }
+
   };
   
   export default homeStyles;
