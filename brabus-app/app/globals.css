@@ -29,3 +29,31 @@ main {
     width: 50%;
   }
 }
+
+@font-face {
+  font-family: 'BankGothicMedium';
+  src: url('/fonts/bank gothic medium bt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amazon Ember Thin';
+  src: url('/fonts/Amazon Ember Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amazon Ember Light';
+  src: url('/fonts/Amazon Ember Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amazon Ember Regular';
+  src: url('/fonts/Amazon Ember.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

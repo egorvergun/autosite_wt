@@ -25,7 +25,7 @@ const CarCarousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     arrows: false,
   };
@@ -50,6 +50,22 @@ const CarCarousel = () => {
         height: { xs: '50vh', md: '100vh' },
       }}
     >
+      <Typography 
+        variant="h3" 
+        sx={{
+          position: 'absolute',
+          top: '13%',
+           left: '2%',
+          width: '100%',
+          fontFamily: 'BankGothicMedium',
+          fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
+          textAlign: 'center',
+          color: 'Black',
+          zIndex: 3,
+        }}
+      >
+        Amazing Auto Park
+      </Typography>
 
       <Box sx={{ width: '100%', zIndex: 1 }}>
         <Slider 
@@ -83,22 +99,6 @@ const CarCarousel = () => {
                   }}
                   
                 />
-                {slide.id === 1 && (
-                    <Typography 
-                      variant="h3" 
-                      sx={{
-                        position: 'absolute',
-                        top: '10%',
-                        width: '100%',
-                        fontSize: { xs: '1.5rem', sm: '2rem', md: '3rem' },
-                        textAlign: 'center',
-                        color: 'Black',
-                        zIndex: 3,
-                      }}
-                    >
-                      Amazing Auto Park
-                    </Typography>
-                )}
               </Box>
             </Box>
           ))}
@@ -146,6 +146,7 @@ const CarCarousel = () => {
         variant="contained"
         color="primary"
         sx={{
+          fontFamily: 'Amazon Ember Light',
           position: 'absolute',
           bottom: '20px',
           textTransform: 'uppercase',

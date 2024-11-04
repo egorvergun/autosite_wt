@@ -1,4 +1,4 @@
-"use client"; // Добавьте эту строку в начало
+"use client"; 
 
 import { AppBar, Toolbar, Box, Container, Link, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -37,13 +37,6 @@ const Header = () => {
             justifyContent: 'space-between',
           }}
         >
-          {/* Кнопка слева на маленьких экранах */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 2 }}>
-            <IconButton color="inherit">
-              <VisibilityIcon /> {/* Замените на нужный вам иконку */}
-            </IconButton>
-          </Box>
-
           {/* Логотип */}
           <Box sx={{ my: 2 }}>
             <Link href="/" sx={{ textDecoration: 'none' }}>
@@ -73,6 +66,7 @@ const Header = () => {
                 key={item.text}
                 href={item.href}
                 sx={{
+                  fontFamily: 'Amazon Ember Light',
                   color: 'white',
                   textDecoration: 'none',
                   mx: 2,
@@ -101,8 +95,8 @@ const Header = () => {
           <List>
             {menuItems.map((item) => (
               <ListItem button key={item.text}>
-                <Link href={item.href} sx={{ textDecoration: 'none', color: 'white', width: '100%' }}>
-                  <ListItemText primary={item.text} sx={{ textAlign: 'center' }} />
+                <Link href={item.href} sx={{textDecoration: 'none', color: 'white', width: '100%' }}>
+                  <ListItemText primary={item.text} sx={{ textAlign: 'center'}} />
                 </Link>
               </ListItem>
             ))}

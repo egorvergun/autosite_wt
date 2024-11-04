@@ -34,8 +34,8 @@ const CardSection = () => {
       <Typography
         variant="h4"
         sx={{
+          fontFamily: 'BankGothicMedium',
           color: 'white',
-          fontWeight: 'bold',
           textTransform: 'uppercase',
           mb: 2,
         }}
@@ -47,11 +47,11 @@ const CardSection = () => {
         sx={{
           color: 'white',
           mb: 4,
-          textTransform: 'uppercase',
-          letterSpacing: '2px',
+          fontFamily: 'BankGothicMedium',
+          letterSpacing: '5px',
         }}
       >
-        with brabus
+        with brabus...
       </Typography>
 
       <Box
@@ -93,7 +93,8 @@ const CardSection = () => {
           <Typography
             variant="h6"
             sx={{
-              fontWeight: 'bold',
+              fontFamily: 'BankGothicMedium',
+              letterSpacing: '0px',
               mt: 2,
               textAlign: 'left', // Выравнивание текста по левому краю
               width: '100%', // Занимает всю ширину, чтобы textAlign применился
@@ -104,6 +105,7 @@ const CardSection = () => {
           <Typography
             variant="body2"
             sx={{
+              fontFamily:'Amazon Ember Thin',
               color: '#ccc',
               mt: 1,
               textAlign: 'left', // Выравнивание текста по левому краю
