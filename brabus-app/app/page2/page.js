@@ -36,7 +36,7 @@ function AboutUs() {
           <div className="card text-center">
             <div className="card-body">
               <h5 className="card-title" style={{ fontSize: '1.5rem' }}>VERHUN YEHOR</h5>
-              <img src="developer.jpg" className="rounded-circle mb-3" alt="CEO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+              <img src="Yehor.jpg" className="rounded-circle mb-3" alt="CEO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
               <p className="card-text" style={{ fontSize: '1.1rem' }}>Our CEO is the best CEO in the world. He is a great guy and loves to play golf.</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ function AboutUs() {
           <div className="card text-center">
             <div className="card-body">
               <h5 className="card-title" style={{ fontSize: '1.5rem' }}>KASABUTSKI YAN</h5>
-              <img src="developer.jpg" className="rounded-circle mb-3" alt="CTO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+              <img src="Jan.jpg" className="rounded-circle mb-3" alt="CTO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
               <p className="card-text" style={{ fontSize: '1.1rem' }}>Our CTO is the best CTO in the world. He is a great guy and loves to play golf.</p>
             </div>
           </div>
@@ -54,7 +54,7 @@ function AboutUs() {
           <div className="card text-center">
             <div className="card-body">
               <h5 className="card-title" style={{ fontSize: '1.5rem' }}>KOROTKYY ARTEM</h5>
-              <img src="developer.jpg" className="rounded-circle mb-3" alt="COO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+              <img src="Artem.jpg" className="rounded-circle mb-3" alt="COO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
               <p className="card-text" style={{ fontSize: '1.1rem' }}>Our COO is the best COO in the world. He is a great guy and loves to play golf.</p>
             </div>
           </div>

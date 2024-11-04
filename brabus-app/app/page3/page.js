@@ -6,7 +6,6 @@ import { Global, css } from '@emotion/react';
 const GlobalStyles = () => (
     <Global
         styles={css`
-            /* Apply global styles */
             @font-face {
                 font-family: 'Bgothm';
                 src: url('/bgothm.ttf') format('truetype');
@@ -76,10 +75,19 @@ const Vehicles = () => {
   ];
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div
+      style={{
+        backgroundImage: 'url(BLK.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        color: 'white',
+        padding: '20px',
+      }}
+    >
       <GlobalStyles />
 
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>BRABUS MODELS </h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>BRABUS MODELS</h1>
 
       <div className="car-gallery">
         {cars.map((car, index) => (
@@ -147,46 +155,61 @@ const Vehicles = () => {
           color: #fff;
         }
 
-        @media (max-width: 992px) {
-          .car-gallery {
-            justify-content: center;
-          }
-          .car-card, .large-car-photo {
-            width: 90%;
-            max-width: 600px;
-          }
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 425px) {
           h1 {
-            font-size: 1.5rem;
-          }
-          .car-card, .large-car-photo {
-            width: 100%;
-          }
-        }
-
-        @media (max-width: 320px) {
-          .car-gallery, .large-car-photo {
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
+            font-size: 1.2rem;
           }
 
           .car-card {
-            flex: 1 1 100%;
-            max-width: 100%;
-            margin: 0;
+            height: auto;
+            margin: 5px;
           }
 
           .car-photo {
-            height: auto;
+            height: 250px;
           }
 
           .large-car-photo {
             flex-direction: column;
-            text-align: center;
+            align-items: center;
             padding: 10px;
+          }
+
+          .large-car-photo h2 {
+            font-size: 1.5rem;
+          }
+
+          .large-car-photo p {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 375px) {
+          h1 {
+            font-size: 1.1rem;
+          }
+
+          .car-card {
+            height: auto;
+            margin: 5px;
+          }
+
+          .car-photo {
+            height: 200px;
+          }
+
+          .large-car-photo {
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+          }
+
+          .large-car-photo h2 {
+            font-size: 1.3rem;
+          }
+
+          .large-car-photo p {
+            font-size: 0.9rem;
           }
         }
       `}</style>
