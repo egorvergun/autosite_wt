@@ -4,7 +4,6 @@ import { NextResponse } from 'next/server';
 export async function GET(request) {
     try {
         const token = process.env.GITHUB_TOKEN;
-        console.log('GITHUB_TOKEN:', token);
         if (!token) {
             console.error('GITHUB_TOKEN не установлен в переменных окружения.');
             return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
