@@ -18,11 +18,11 @@ const Header = () => {
 
   const menuItems = [
     { text: 'Art & Culture', href: '/' },
-    { text: 'Sustainability', href: '/page2' },
-    { text: 'Design', href: '/services' },
-    { text: 'Exclusive', href: '/contact' },
+    { text: 'Záľuby', href: '/page2' },
+    //{ text: 'Design', href: '/services' },
+    //{ text: 'Exclusive', href: '/contact' },
     { text: 'Vehicles', href: '/page3' },
-    { text: 'Change Log', href: '/changelog' },
+    { text: 'sekcia_zmena', href: '/changelog' },
   ];
 
   return (
