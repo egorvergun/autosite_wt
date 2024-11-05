@@ -31,7 +31,10 @@ export async function GET(request) {
             'do dHeader and fix him',
             'Update main page',
             'Add block with vehicles cards, change header for small displays',
-            'test change log'
+            'test change log',
+            'try fix change log token',
+            'Page23',
+
         ];
 
         const commits = response.data.filter(commit =>
