@@ -27,13 +27,29 @@ const Changelog = () => {
   const [selectedFontSize, setSelectedFontSize] = useState(16);
 
   // Objekt s popismi commitov
-  const commitDescriptions = {
+const commitDescriptions = {
+    'a31e88ef0c9aad7f600b8ad66dce27eb4d30c269':
+        'Prepracovaný dizajn "Sekcia zmeny" a pridané funkcie na správu textu',
+    'fbfda9659dee038d42766a7c854305dcfeae92d2':
+        'Pridanie fotografií členov tímu',
+    'cd13043fabd3642fcd1e1a12ce271dd1658f1cb1':
+        'Pridanie nových fontov na hlavnú stránku a "Header"',
+    'dfe5d8e4c89bea1511fb100c6cbc4194a28fb816':
+        'Pridanie dvoch nových stránok: "Vehicles" a "About us"',
+    'dfa68300eb2734bc36a2d7edc7434a9b4c99c9eb':
+        'Úprava Git Token a pridanie prepojenia komentárov na stránku',
     '5fadfc9f9da8b65c13e380ce4266642b24e1773c':
-      'Popis pre prvý commit. Tu môžete podrobne opísať, čo sa zmenilo.',
-    '1234567890abcdef1234567890abcdef12345678':
-      'Popis pre druhý commit. Ďalšie detaily o vylepšeniach alebo opravách.',
+        'Testovanie stránky "Sekcia zmeny"',
+    '7c684b29f582ab61b37d0f6ead0a6bc27325d69c':
+        'Pridanie vehicles cards na hlavnú stránku a pridanie adaptívnosti "Header" pre malé displeje',
+    '03b1230133315a56bdbb9a54f58e78f0ff80a7d3':
+        'Pridanie základného dizajnu na hlavnú stránku',
+    '61b0e3b6a22b39b003a1bd496ef5e8968d6fc7c7':
+        'Pridanie footeru a oprava zobrazenia na rôznych displejoch',
+    '7915768d8e98d5981836ee495a6e791d179c3d57':
+        'Pridanie fade na hlavnú stránku',
     // Pridajte viac commitov podľa potreby
-  };
+};
 
   useEffect(() => {
     const fetchCommits = async () => {
@@ -128,7 +144,7 @@ const Changelog = () => {
         }}
       >
         <Typography variant="h4" sx={{ mb: 4, ...textStyles }}>
-          Zmeny
+          Sekcia zmeny
         </Typography>
         <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
           {commits.map((commit) => (
