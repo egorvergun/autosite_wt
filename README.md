@@ -60,4 +60,8 @@ To get started with the project, clone the repository and install the dependenci
 ```sh
 git clone https://github.com/yourusername/brabus-app.git
 cd brabus-app
+<<<<<<< HEAD
 npm install
+=======
+npm install
+>>>>>>> a6f39eed52cac22d75dc69c95d67df78eaa1b250
