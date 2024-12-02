@@ -13,7 +13,7 @@ function AboutUs() {
         padding: '20px'
       }}
     >
-      <h1 className="text-center mb-4" style={{ fontSize: '2.5rem', fontFamily: 'bgothm' }}>
+      <h1 className="text-center mb-4" style={{ fontSize: '2.5rem' }}>
         About Us
       </h1>
       <div className="row mt-4">
@@ -22,7 +22,9 @@ function AboutUs() {
             <div className="card-body">
               <h5 className="card-title" style={{ fontSize: '1.5rem' }}>VERHUN YEHOR</h5>
               <img src="Yehor.jpg" className="rounded-circle mb-3" alt="CEO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
-              <p className="card-text" style={{ fontSize: '1.1rem' }}>Hrám na syntetizátor, rád chodím na turistiku a mám záľubu v strategických hrách..</p>
+              <p className="card-text" style={{ fontSize: '1.1rem' }}>Hrám na syntetizátor, rád chodím na turistiku a mám záľubu v strategických hrách.
+              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+              </p>
             </div>
           </div>
         </div>

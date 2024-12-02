@@ -83,11 +83,14 @@ const Vehicles = () => {
         minHeight: '100vh',
         color: 'white',
         padding: '20px',
+        fontFamily: 'AmazonEmberThin',
       }}
     >
       <GlobalStyles />
 
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>BRABUS MODELS</h1>
+      <h1 className="brabus-models-heading" style={{ textAlign: 'center', marginBottom: '20px' }}>
+        BRABUS MODELS
+      </h1>
 
       <div className="car-gallery">
         {cars.map((car, index) => (
@@ -118,6 +121,11 @@ const Vehicles = () => {
       </div>
 
       <style jsx>{`
+
+        .brabus-models-heading {
+          font-family: 'AmazonEmberLight', sans-serif;
+        }
+
         .car-gallery {
           display: flex;
           flex-wrap: wrap;

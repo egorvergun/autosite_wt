@@ -26,7 +26,6 @@ const Changelog = () => {
   const [sliderValue, setSliderValue] = useState(16);
   const [selectedFontSize, setSelectedFontSize] = useState(16);
 
-  // Objekt s popismi commitov
 const commitDescriptions = {
     'a31e88ef0c9aad7f600b8ad66dce27eb4d30c269':
         'Prepracovaný dizajn "Sekcia zmeny" a pridané funkcie na správu textu',
@@ -48,7 +47,6 @@ const commitDescriptions = {
         'Pridanie footeru a oprava zobrazenia na rôznych displejoch',
     '7915768d8e98d5981836ee495a6e791d179c3d57':
         'Pridanie fade na hlavnú stránku',
-    // Pridajte viac commitov podľa potreby
 };
 
   useEffect(() => {
@@ -132,7 +130,6 @@ const commitDescriptions = {
         color: '#fff',
       }}
     >
-      {/* Blok s commitmi */}
       <Box
         sx={{
           backgroundColor: '#111',
@@ -290,7 +287,6 @@ const commitDescriptions = {
             sx={{ color: '#fff' }}
           />
         </Box>
-        {/* Rozbaľovacia ponuka pre prednastavené veľkosti písma */}
         <FormControl variant="outlined" sx={{ minWidth: 120, width: '100%' }}>
           <InputLabel sx={{ color: '#fff', ...textStyles }}>Veľkosť písma</InputLabel>
           <Select

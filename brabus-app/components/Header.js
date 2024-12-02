@@ -17,12 +17,12 @@ const Header = () => {
   };
 
   const menuItems = [
-    { text: 'Art & Culture', href: '/' },
+    { text: 'Hlavná', href: '/' },
     { text: 'Záľuby', href: '/page2' },
-    //{ text: 'Design', href: '/services' },
-    //{ text: 'Exclusive', href: '/contact' },
-    { text: 'Vehicles', href: '/page3' },
-    { text: 'sekcia_zmena', href: '/changelog' },
+    //{ text: 'Dizajn', href: '/services' },
+    //{ text: 'Exkluzívne', href: '/contact' },
+    { text: 'Vozidlá', href: '/page3' },
+    { text: 'Sekcia zmien', href: '/changelog' },
   ];
 
   return (
@@ -37,21 +37,18 @@ const Header = () => {
             justifyContent: 'space-between',
           }}
         >
-          {/* Логотип */}
           <Box sx={{ my: 2 }}>
             <Link href="/" sx={{ textDecoration: 'none' }}>
               <Image src={'/logo.png'} width={135} height={100} alt="Company Logo" />
             </Link>
           </Box>
 
-          {/* Кнопка меню на маленьких экранах */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
             <IconButton color="inherit" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
           </Box>
 
-          {/* Навигация для больших экранов */}
           <Box
             component="nav"
             sx={{
@@ -80,7 +77,6 @@ const Header = () => {
         </Toolbar>
       </Container>
 
-      {/* Выпадающее меню для маленьких экранов */}
       <Drawer
         anchor="right"
         open={drawerOpen}
