@@ -19,7 +19,7 @@ const Header = () => {
   const menuItems = [
     { text: 'Hlavná', href: '/' },
     { text: 'Záľuby', href: '/page2' },
-    //{ text: 'Dizajn', href: '/services' },
+    { text: 'Registrácia', href: '/page4' },
     //{ text: 'Exkluzívne', href: '/contact' },
     { text: 'Vozidlá', href: '/page3' },
     { text: 'Sekcia zmien', href: '/changelog' },

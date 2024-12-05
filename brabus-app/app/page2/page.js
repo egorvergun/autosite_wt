@@ -23,7 +23,7 @@ function AboutUs() {
               <h5 className="card-title" style={{ fontSize: '1.5rem' }}>VERHUN YEHOR</h5>
               <img src="Yehor.jpg" className="rounded-circle mb-3" alt="CEO" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
               <p className="card-text" style={{ fontSize: '1.1rem' }}>Hrám na syntetizátor, rád chodím na turistiku a mám záľubu v strategických hrách.
-              ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            
               </p>
             </div>
           </div>
