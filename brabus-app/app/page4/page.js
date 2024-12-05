@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useRouter } from 'next/navigation';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,6 @@ const RegistrationForm = () => {
     password: "",
     email: "",
     birthYear: "",
-    phone: "",
     country: "",
   });
 
@@ -18,9 +18,12 @@ const RegistrationForm = () => {
     password: "",
     email: "",
     birthYear: "",
-    phone: "",
     country: "",
   });
+
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const router = useRouter();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,10 +76,29 @@ const RegistrationForm = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Údaje formulára:", formData);
+      try {
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          setSuccessMessage("Registration successful! Redirecting to login...");
+          setTimeout(() => {
+            router.push('/login');
+          }, 2000);
+        } else {
+          console.error('Error registering user');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
   };
 
@@ -103,6 +125,7 @@ const RegistrationForm = () => {
         }}
       >
         <h2 className="text-center mb-4">Registrácia</h2>
+        {successMessage && <div className="alert alert-success">{successMessage}</div>}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">
