@@ -5,10 +5,7 @@ import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
 
-export default NextAuth({
-  session: {
-    strategy: "jwt",
-  },
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -28,14 +25,33 @@ export default NextAuth({
       },
     }),
   ],
+  session: {
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
   callbacks: {
     async jwt({ token, user }) {
-      if (user) token.id = user.id;
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+        token.name = user.name;
+      }
       return token;
     },
     async session({ session, token }) {
-      if (token) session.user.id = token.id;
+      if (token) {
+        session.user.id = token.id;
+        session.user.email = token.email;
+        session.user.name = token.name;
+      }
       return session;
     },
   },
-});
+  pages: {
+    signIn: '/login',
+  },
+  secret: process.env.NEXTAUTH_SECRET,
+};
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };

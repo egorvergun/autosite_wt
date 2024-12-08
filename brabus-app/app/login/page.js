@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from 'next/navigation';
-import "bootstrap/dist/css/bootstrap.min.css"; // Убедитесь, что стили Bootstrap загружаются
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -12,22 +12,23 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: formData.email, password: formData.password }),
+    
+    const result = await signIn('credentials', {
+      email: formData.email,
+      password: formData.password,
+      redirect: false,
     });
 
-    const data = await response.json();
-    if (response.ok) {
-      setErrorMessage(""); // Clear error message
+    if (result?.error) {
+      setErrorMessage("Incorrect email or password.");
+      setSuccessMessage("");
+    } else {
+      setErrorMessage("");
       setSuccessMessage("Login successful! Redirecting...");
       setTimeout(() => {
         router.push('/');
-      }, 2000);
-    } else {
-      setErrorMessage("Incorrect email or password.");
-      console.error('Error logging in');
+        router.refresh();
+      }, 1500);
     }
   };
 

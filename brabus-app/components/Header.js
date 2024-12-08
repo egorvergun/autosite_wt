@@ -1,13 +1,15 @@
 "use client"; 
 
-import { AppBar, Toolbar, Box, Container, Link, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Box, Container, Link, IconButton, Drawer, List, ListItem, ListItemText, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useSession, signOut } from 'next-auth/react';
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { data: session } = useSession();
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -21,11 +23,14 @@ const Header = () => {
     { text: 'Záľuby', href: '/page2' },
     { text: 'Vozidlá', href: '/page3' },
     { text: 'Sekcia zmien', href: '/changelog' },
+    { text: 'Používatelia', href: '/users' },
   ];
 
-  const authItems = [
+  const authItems = session ? [
+    { text: 'Odhlásiť sa', onClick: () => signOut({ callbackUrl: '/' }) }
+  ] : [
     { text: 'Registrácia', href: '/page4' },
-    { text: 'Login', href: '/login' },
+    { text: 'Login', href: '/login' }
   ];
 
   return (
@@ -88,19 +93,35 @@ const Header = () => {
             }}
           >
             {authItems.map((item) => (
-              <Link
-                key={item.text}
-                href={item.href}
-                sx={{
-                  fontFamily: 'Amazon Ember Light',
-                  color: 'white',
-                  textDecoration: 'none',
-                  mx: 2,
-                  fontSize: 18,
-                }}
-              >
-                {item.text}
-              </Link>
+              item.href ? (
+                <Link
+                  key={item.text}
+                  href={item.href}
+                  sx={{
+                    fontFamily: 'Amazon Ember Light',
+                    color: 'white',
+                    textDecoration: 'none',
+                    mx: 2,
+                    fontSize: 18,
+                  }}
+                >
+                  {item.text}
+                </Link>
+              ) : (
+                <Button
+                  key={item.text}
+                  onClick={item.onClick}
+                  sx={{
+                    fontFamily: 'Amazon Ember Light',
+                    color: 'white',
+                    textDecoration: 'none',
+                    mx: 2,
+                    fontSize: 18,
+                  }}
+                >
+                  {item.text}
+                </Button>
+              )
             ))}
           </Box>
         </Toolbar>
@@ -132,9 +153,18 @@ const Header = () => {
             </ListItem>
             {authItems.map((item) => (
               <ListItem button key={item.text}>
-                <Link href={item.href} sx={{textDecoration: 'none', color: 'white', width: '100%' }}>
-                  <ListItemText primary={item.text} sx={{ textAlign: 'center'}} />
-                </Link>
+                {item.href ? (
+                  <Link href={item.href} sx={{textDecoration: 'none', color: 'white', width: '100%' }}>
+                    <ListItemText primary={item.text} sx={{ textAlign: 'center'}} />
+                  </Link>
+                ) : (
+                  <Box
+                    onClick={item.onClick}
+                    sx={{textDecoration: 'none', color: 'white', width: '100%', cursor: 'pointer' }}
+                  >
+                    <ListItemText primary={item.text} sx={{ textAlign: 'center'}} />
+                  </Box>
+                )}
               </ListItem>
             ))}
           </List>
