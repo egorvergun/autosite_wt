@@ -1,8 +1,35 @@
 "use client"
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from 'react';
 
-export default function UsersList({ users, error }) {
-  if (error) {
+export default function UsersList({ users: initialUsers, error }) {
+  const [users, setUsers] = useState(initialUsers);
+  const [deleteError, setDeleteError] = useState(null);
+
+  const deleteUser = async (userId) => {
+    if (!confirm('Are you sure you want to delete this user?')) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/users?id=${userId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || 'Failed to delete user');
+      }
+
+      setUsers(users.filter(user => user.id !== userId));
+      setDeleteError(null);
+    } catch (error) {
+      console.error('Error deleting user:', error);
+      setDeleteError(error.message);
+    }
+  };
+
+  if (error || deleteError) {
     return (
       <div
         style={{
@@ -25,7 +52,7 @@ export default function UsersList({ users, error }) {
           }}
         >
           <h2 className="text-center mb-4 text-danger">Error</h2>
-          <p className="text-center">{error}</p>
+          <p className="text-center">{error || deleteError}</p>
         </div>
       </div>
     );
@@ -101,6 +128,17 @@ export default function UsersList({ users, error }) {
                         })}
                       </p>
                     </div>
+                    <button 
+                      onClick={() => deleteUser(user.id)}
+                      className="btn btn-danger mt-3"
+                      style={{
+                        width: '100%',
+                        backgroundColor: '#dc3545',
+                        borderColor: '#dc3545'
+                      }}
+                    >
+                      Delete User
+                    </button>
                   </div>
                 </div>
               </div>
