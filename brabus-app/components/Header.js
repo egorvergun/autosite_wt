@@ -20,8 +20,8 @@ const Header = () => {
 
   const menuItems = [
     { text: 'Hlavná', href: '/' },
-    { text: 'Záľuby', href: '/page2' },
-    { text: 'Vozidlá', href: '/page3' },
+    { text: 'Záľuby', href: '/aboutus' },
+    { text: 'Vozidlá', href: '/vehicles' },
     { text: 'Sekcia zmien', href: '/changelog' },
     { text: 'Používatelia', href: '/users' },
   ];
@@ -29,7 +29,7 @@ const Header = () => {
   const authItems = session ? [
     { text: 'Odhlásiť sa', onClick: () => signOut({ callbackUrl: '/' }) }
   ] : [
-    { text: 'Registrácia', href: '/page4' },
+    { text: 'Registrácia', href: '/registr' },
     { text: 'Login', href: '/login' }
   ];
 
