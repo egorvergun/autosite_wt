@@ -2,11 +2,13 @@
   "name": "brabus-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --experimental-vm-modules node_modules/mocha/bin/mocha.js test/**/*.test.js --timeout 10000"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -38,6 +40,10 @@
     "tailwindcss": "^3.4.16"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1",
+    "node-fetch": "^2.7.0",
     "postcss": "^8.4.49",
     "prisma": "^6.0.1",
     "tailwindcss": "^3.4.16"
