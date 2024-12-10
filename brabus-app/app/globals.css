@@ -57,3 +57,53 @@ main {
   font-weight: normal;
   font-style: normal;
 }
+
+.users-page {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.users-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.users-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-card {
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: scale(1.02);
+}
+
+.users-card h2 {
+  font-family: 'BankGothicMedium', sans-serif;
+  color: #333;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.users-card .form-control {
+  border-radius: 20px;
+}
+
+.users-card strong {
+  font-family: 'Amazon Ember Regular', sans-serif;
+  color: #555;
+}

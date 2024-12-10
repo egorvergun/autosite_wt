@@ -62,7 +62,14 @@ const RegistrationForm = () => {
       formErrors.birthYear = "Rok narodenia je povinný.";
       isValid = false;
     } else {
-      formErrors.birthYear = "";
+      const today = new Date();
+      const birthDate = new Date(formData.birthYear);
+      if (birthDate > today) {
+        formErrors.birthYear = "Dátum narodenia nemôže byť v budúcnosti.";
+        isValid = false;
+      } else {
+        formErrors.birthYear = "";
+      }
     }
 
     if (!formData.country) {
@@ -180,6 +187,7 @@ const RegistrationForm = () => {
               name="birthYear"
               value={formData.birthYear}
               onChange={handleChange}
+              max={new Date().toISOString().split("T")[0]}
             />
             {errors.birthYear && <div className="text-danger">{errors.birthYear}</div>}
           </div>
